@@ -250,6 +250,7 @@ body::-webkit-scrollbar{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    column-gap: 24px;
 }
 
 .blog-card-body .card-subtitle{
@@ -258,7 +259,7 @@ body::-webkit-scrollbar{
 }
 
 .blog-card-body .card-title{
-    flex: 1 1 auto;
+    flex: 1 1 0%;
     order: 2;
     min-width: 0;
 }
@@ -266,6 +267,7 @@ body::-webkit-scrollbar{
 .blog-card-body .card-link{
     flex: 0 0 auto;
     order: 3;
+    align-self: center;
 }
 
 .blog-card-body .card-text{
