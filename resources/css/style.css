@@ -199,7 +199,7 @@ body::-webkit-scrollbar{
     width: 100% !important;
 }
 
-.card-proj .card-body{
+.card-proj .card-body:not(.blog-card-body){
     display: flex;
     flex-direction: column;
     height: 100%;
