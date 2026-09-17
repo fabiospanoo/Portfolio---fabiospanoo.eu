@@ -18,7 +18,7 @@ class EnsureSchemaMigrated
 
     public function handle(Request $request, Closure $next): Response
     {
-        if ($this->app->environment('production') && env('AUTO_MIGRATE', false)) {
+        if ($this->app->environment('production') && config('site.auto_migrate')) {
             if (! Schema::hasTable('migrations')) {
                 Artisan::call('migrate', ['--force' => true]);
             } else {

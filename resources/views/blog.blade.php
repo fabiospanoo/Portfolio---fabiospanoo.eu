@@ -1,4 +1,4 @@
-<x-layout title="Blog // Fabio Spanò" navbarBrand="fab's blog">
+<x-layout title="Blog // Fabio Spanò" navbarBrand="fab's blog" metaDescription="Articles and notes on web development, agentic AI and Java by Fabio Spanò." metaType="blog">
     <div class="body-style">
         <main class="blog-section">
             <ul class="blog-list">

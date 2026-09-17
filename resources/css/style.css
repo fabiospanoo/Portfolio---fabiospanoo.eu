@@ -748,3 +748,14 @@ body::-webkit-scrollbar{
         width: 100%;
     }
 }
+
+@media (min-width: 1980px) {
+    body{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    footer{
+        padding: none;
+    }
+}

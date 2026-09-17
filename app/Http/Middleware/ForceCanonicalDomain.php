@@ -16,7 +16,7 @@ class ForceCanonicalDomain
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $allowed = array_values(array_filter(array_map('trim', explode(',', (string) env('ALLOWED_HOSTS', '')))));
+        $allowed = config('site.allowed_hosts');
 
         if ($allowed === []) {
             return $next($request);
@@ -26,8 +26,8 @@ class ForceCanonicalDomain
             return $next($request);
         }
 
-        $scheme = env('APP_SCHEME', 'https');
-        $canonical = env('CANONICAL_HOST', $request->getHost());
+        $scheme = config('site.app_scheme');
+        $canonical = config('site.canonical_host', $request->getHost());
 
         return redirect()->away($scheme.'://'.$canonical.$request->getRequestUri(), 301);
     }

@@ -1,4 +1,7 @@
-<x-layout title="{{ $post->title }} // Fabio Spanò">
+<x-layout
+    :title="$post->title.' // Fabio Spanò'"
+    :meta-description="\Illuminate\Support\Str::limit($post->excerpt ?: $post->content, 160)"
+    metaType="article">
     <div class="body-style">
         <main class="blog-article">
             <a class="blog-back-link" href="{{ route('blog.index') }}">&larr; Back to blog</a>

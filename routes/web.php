@@ -17,6 +17,8 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 
 Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 
+Route::get('/sitemap.xml', [PublicController::class, 'sitemap'])->name('sitemap');
+
 /*
 |--------------------------------------------------------------------------
 | Admin (hidden login, not linked anywhere on the public site)

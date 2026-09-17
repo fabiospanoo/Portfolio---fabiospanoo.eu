@@ -1,4 +1,4 @@
-<x-layout title="Fabio Spanò // Agentic AI, Java, Web Developer">
+<x-layout title="Fabio Spanò // Agentic AI, Java, Web Developer" metaDescription="Portfolio of Fabio Spanò, web developer and agentic AI specialist. Projects built with Java, Laravel, Blade and more.">
     <div class="body-style">
         <header>
             <div class="header-custom">
