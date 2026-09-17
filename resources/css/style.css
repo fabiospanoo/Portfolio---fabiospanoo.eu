@@ -749,13 +749,16 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (min-width: 1980px) {
+@media (min-width: 1981px) {
     body{
         padding-left: 200px;
         padding-right: 200px;
     }
 
     footer{
-        padding: none;
+        margin-left: -200px;
+        margin-right: -200px;
+        padding-left: 200px;
+        padding-right: 200px;
     }
 }
