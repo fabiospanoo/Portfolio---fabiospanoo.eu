@@ -73,7 +73,7 @@ class PostController extends Controller
     {
         return $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'excerpt' => ['nullable', 'string', 'max:500'],
+            'category' => ['nullable', 'string', 'max:255'],
             'content' => ['required', 'string'],
         ]);
     }

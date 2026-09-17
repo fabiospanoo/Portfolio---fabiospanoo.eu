@@ -14,7 +14,7 @@
                 </div>
             @endif
             @if ($project->url)
-                <a href="{{ $project->url }}" target="_blank" rel="noopener" class="btn btn-{{ $button }}">Github</a>
+                <a href="{{ $project->url }}" target="_blank" rel="noopener" class="btn btn-{{ $button }} mt-auto align-self-start">Github</a>
             @endif
         </div>
     </div>

@@ -1,6 +1,6 @@
 <x-layout
     :title="$post->title.' // Fabio Spanò'"
-    :meta-description="\Illuminate\Support\Str::limit($post->excerpt ?: $post->content, 160)"
+    :meta-description="\Illuminate\Support\Str::limit($post->content, 160)"
     metaType="article">
     <div class="body-style">
         <main class="blog-article">
@@ -9,6 +9,9 @@
             <article>
                 <header class="blog-article-header">
                     <p class="blog-date"><span class="text-comment">./</span> {{ $post->created_at->format('d F Y') }}</p>
+                    @if ($post->category)
+                        <p class="blog-category"><span class="text-comment">#</span> {{ $post->category }}</p>
+                    @endif
                     <h1 class="bolder">{{ $post->title }}</h1>
                 </header>
 

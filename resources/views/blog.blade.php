@@ -9,7 +9,7 @@
                             <h2 class="blog-title">
                                 <a class="bolder" href="{{ route('blog.show', $post) }}">{{ \Illuminate\Support\Str::limit($post->title, 45, '...') }}</a>
                             </h2>
-                            <p class="blog-excerpt">{{ \Illuminate\Support\Str::limit($post->excerpt ?: $post->content, 65, '...') }}</p>
+                            <p class="blog-excerpt">{{ \Illuminate\Support\Str::limit($post->content, 65, '...') }}</p>
                         </div>
                         <a class="blog-read-more" href="{{ route('blog.show', $post) }}" aria-label="Read {{ $post->title }}">
                             Read post <span aria-hidden="true">&rarr;</span>

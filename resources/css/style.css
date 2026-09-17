@@ -199,9 +199,20 @@ body::-webkit-scrollbar{
     width: 100% !important;
 }
 
+.card-proj .card-body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .project-card-text{
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
 }
 
 .project-tags{
@@ -632,6 +643,24 @@ body::-webkit-scrollbar{
     color: var(--color-t);
     font-size: 14px;
     max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-card-preview {
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-category {
+    margin: 0 0 12px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-c);
 }
 
 .blog-excerpt::before {

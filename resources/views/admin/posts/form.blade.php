@@ -26,9 +26,17 @@
             </div>
 
             <div class="mb-3">
-                <label for="excerpt" class="form-label"><span class="text-comment">./ </span>excerpt <span class="admin-hint">(shown in the blog list — optional)</span></label>
-                <input type="text" class="form-control" id="excerpt" name="excerpt" value="{{ old('excerpt', $post->excerpt) }}" maxlength="500">
-                @error('excerpt') <div class="admin-error">{{ $message }}</div> @enderror
+                <label for="category" class="form-label"><span class="text-comment">./ </span>category <span class="admin-hint">(pick one or type your own — optional)</span></label>
+                <input type="text" class="form-control" id="category" name="category" list="post-category-list" value="{{ old('category', $post->category) }}" maxlength="255" autocomplete="off">
+                <datalist id="post-category-list">
+                    <option value="Web Development"></option>
+                    <option value="Agentic AI"></option>
+                    <option value="Java"></option>
+                    <option value="Laravel"></option>
+                    <option value="DevOps"></option>
+                    <option value="Tutorial"></option>
+                </datalist>
+                @error('category') <div class="admin-error">{{ $message }}</div> @enderror
             </div>
 
             <div class="mb-3">
